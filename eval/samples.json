@@ -1,0 +1,103 @@
+[
+  {
+    "id": "email-urgent",
+    "kind": "email",
+    "text": "Hi Sara,\nThe client moved the demo to this Thursday 3pm. Please send the final slides by Wednesday noon and confirm the room booking. If we miss this we lose the contract.\nThanks, Omar",
+    "expected_priority": "high",
+    "must_mention": [
+      "Wednesday",
+      "slides"
+    ]
+  },
+  {
+    "id": "email-low",
+    "kind": "email",
+    "text": "اهلا فريق،\nمجرد تذكير ودي إن النشرة الشهرية اتبعتت. مفيش مطلوب منكم حاجة.\nتحياتي، منى",
+    "expected_priority": "low",
+    "must_mention": []
+  },
+  {
+    "id": "email-recap-medium",
+    "kind": "email",
+    "text": "Hi team,\nThe new homepage design was approved by the client. The blog section is postponed to Phase 2, so no work is needed on it for now. Mona will share the final brand colors on Monday, March 10. Khaled, could you start the homepage development once you receive them? Launch is planned for March 28. It would be great if someone could check the hosting costs, but there's no rush. Next sync is Tuesday, March 18 at 11am.\nBest, Layla",
+    "expected_priority": "medium",
+    "must_mention": [
+      [
+        "March 10",
+        "10 March",
+        "Mar 10"
+      ],
+      [
+        "March 18",
+        "18 March"
+      ],
+      [
+        "March 28",
+        "28 March"
+      ],
+      "hosting"
+    ]
+  },
+  {
+    "id": "contract-rent",
+    "kind": "contract",
+    "text": "عقد إيجار\nالبند 1: الطرف الأول أحمد علي (المؤجر) والطرف الثاني خالد حسن (المستأجر).\nالبند 2: مدة العقد سنة تبدأ 1/1/2026.\nالبند 3: الإيجار 5000 جنيه شهريًا يُدفع أول كل شهر.\nالبند 4: يتجدد العقد تلقائيًا لنفس المدة ما لم يخطر أحد الطرفين الآخر قبل 60 يومًا.\nالبند 5: غرامة تأخير 2% عن كل أسبوع.",
+    "must_mention": [
+      "5000",
+      "60",
+      "2%",
+      [
+        "غير مذكور",
+        "غير محدد"
+      ]
+    ],
+    "must_not_mention": [
+      "31/12/2026"
+    ],
+    "expect_ambiguity": true
+  },
+  {
+    "id": "contract-long-pdf",
+    "kind": "contract",
+    "file": "sample_contract_long.pdf",
+    "must_mention": [
+      [
+        "6,500",
+        "6500"
+      ],
+      "2%",
+      "90",
+      [
+        "renew",
+        "تجديد"
+      ],
+      [
+        "unlimited",
+        "غير محدود"
+      ],
+      [
+        "exclusiv",
+        "competitor",
+        "منافس",
+        "الحصرية",
+        "حصري"
+      ]
+    ],
+    "must_not_mention": [
+      "31/12/2027",
+      "December 31, 2027"
+    ],
+    "expect_ambiguity": true,
+    "field_must_mention": {
+      "termination": [
+        "90"
+      ],
+      "payment": [
+        [
+          "6,500",
+          "6500"
+        ]
+      ]
+    }
+  }
+]
